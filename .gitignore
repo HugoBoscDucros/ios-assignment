@@ -1,0 +1,17 @@
+
+# Mac OS X
+*.DS_Store
+
+# Xcode
+
+## User settings
+xcuserdata/
+
+## Obj-C/Swift
+*.hmap
+
+## Build
+*.ipa
+*.dSYM.zip
+*.dSYM
+

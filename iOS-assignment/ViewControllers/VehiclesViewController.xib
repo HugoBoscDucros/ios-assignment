@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VehiclesViewController" customModule="iOS_assignment" customModuleProvider="target">
+            <connections>
+                <outlet property="filterButton" destination="bPF-hr-LNT" id="n1P-Dh-WI0"/>
+                <outlet property="tableView" destination="udw-CW-fQm" id="Rbl-U5-L9t"/>
+                <outlet property="view" destination="Ve9-bd-BZk" id="HEf-yq-1lv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ve9-bd-BZk" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LK0-dr-7zc" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fleet overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgw-LK-sJZ" customClass="HeroLabel" customModule="iOS_assignment" customModuleProvider="target">
+                            <rect key="frame" x="16" y="38" width="382" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" name="blackForegroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="udw-CW-fQm" customClass="DottTableView" customModule="iOS_assignment" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="103.5" width="414" height="714.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPF-hr-LNT" customClass="FilterButton" customModule="iOS_assignment" customModuleProvider="target">
+                            <rect key="frame" x="187" y="768" width="40" height="34"/>
+                            <state key="normal" title="Filter"/>
+                            <state key="highlighted">
+                                <color key="titleColor" name="whiteForegroundColor"/>
+                            </state>
+                            <connections>
+                                <action selector="filterButtonDidTapped:" destination="-1" eventType="touchUpInside" id="Nbg-OK-E2c"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Sgw-LK-sJZ" firstAttribute="top" secondItem="LK0-dr-7zc" secondAttribute="top" constant="38" id="7SR-jA-PJT"/>
+                        <constraint firstAttribute="bottom" secondItem="udw-CW-fQm" secondAttribute="bottom" id="7lJ-h3-iL6"/>
+                        <constraint firstAttribute="bottom" secondItem="bPF-hr-LNT" secondAttribute="bottom" constant="16" id="KN2-tp-ha8"/>
+                        <constraint firstAttribute="trailing" secondItem="udw-CW-fQm" secondAttribute="trailing" id="dHm-ZK-WBG"/>
+                        <constraint firstItem="Sgw-LK-sJZ" firstAttribute="leading" secondItem="LK0-dr-7zc" secondAttribute="leading" constant="16" id="e2J-3R-8F4"/>
+                        <constraint firstItem="udw-CW-fQm" firstAttribute="leading" secondItem="LK0-dr-7zc" secondAttribute="leading" id="nGO-w9-Q5b"/>
+                        <constraint firstItem="udw-CW-fQm" firstAttribute="top" secondItem="Sgw-LK-sJZ" secondAttribute="bottom" constant="44" id="rWc-i1-qSu"/>
+                        <constraint firstItem="bPF-hr-LNT" firstAttribute="centerX" secondItem="LK0-dr-7zc" secondAttribute="centerX" id="sZf-df-qas"/>
+                        <constraint firstAttribute="trailing" secondItem="Sgw-LK-sJZ" secondAttribute="trailing" constant="16" id="yOa-Mb-1Y7"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brand/shapes/yellowArc" translatesAutoresizingMaskIntoConstraints="NO" id="MRH-UN-0zb">
+                    <rect key="frame" x="294" y="0.0" width="120" height="116.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MRH-UN-0zb" secondAttribute="height" multiplier="98:95" id="4Q1-5m-kAe"/>
+                        <constraint firstAttribute="width" constant="120" id="bBC-Up-EUG"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="dob-0J-5Ta"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MRH-UN-0zb" firstAttribute="top" secondItem="Ve9-bd-BZk" secondAttribute="top" id="Azo-aI-LlT"/>
+                <constraint firstItem="LK0-dr-7zc" firstAttribute="leading" secondItem="dob-0J-5Ta" secondAttribute="leading" id="X8Q-Ct-yKu"/>
+                <constraint firstAttribute="trailing" secondItem="MRH-UN-0zb" secondAttribute="trailing" id="Xs8-V3-JmX"/>
+                <constraint firstItem="dob-0J-5Ta" firstAttribute="top" secondItem="LK0-dr-7zc" secondAttribute="top" id="cM6-9m-Dvg"/>
+                <constraint firstItem="dob-0J-5Ta" firstAttribute="trailing" secondItem="LK0-dr-7zc" secondAttribute="trailing" id="ogi-t1-0nc"/>
+                <constraint firstItem="LK0-dr-7zc" firstAttribute="bottom" secondItem="dob-0J-5Ta" secondAttribute="bottom" id="xwX-I8-wDL"/>
+            </constraints>
+            <point key="canvasLocation" x="-354" y="58"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="brand/shapes/yellowArc" width="96" height="99"/>
+        <namedColor name="blackForegroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteForegroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
