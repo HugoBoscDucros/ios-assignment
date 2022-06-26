@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import AssignmentCore
 
 //Shortcut
 var assignmentCore:AssignmentCore {

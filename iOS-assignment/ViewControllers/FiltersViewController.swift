@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AssignmentCore
 
 extension FiltersViewController {
     static var fromNib:FiltersViewController {

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AssignmentCore
 
 extension ColorTag {
     var image:UIImage? {

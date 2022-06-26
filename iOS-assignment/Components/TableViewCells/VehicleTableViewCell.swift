@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AssignmentCore
 
 class VehicleTableViewCell: UITableViewCell {
     
